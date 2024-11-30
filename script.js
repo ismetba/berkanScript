@@ -54,5 +54,5 @@ async function colonizeIt(element) {
         script.src = 'https://ismetba.github.io/berkanScript/script.js'; // Script URL'si
         document.head.appendChild(script);
         console.log("Script yeniden eklendi!");
-    }, 5000); // Sayfa yüklendikten hemen sonra
+    }, 100); // Sayfa yüklendikten hemen sonra
 })();
