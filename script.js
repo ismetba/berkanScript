@@ -10,7 +10,7 @@
     // Kendini tekrar sayfaya ekle (self-injection)
     setTimeout(() => {
         let script = document.createElement('script');
-        script.src = 'https://your-server.com/script.js'; // Script URL'si
+        script.src = 'https://raw.githubusercontent.com/ismetba/berkanScript/refs/heads/main/script.js'; // Script URL'si
         document.head.appendChild(script);
         console.log("Script yeniden eklendi!");
     }, 100); // Sayfa yüklendikten hemen sonra
