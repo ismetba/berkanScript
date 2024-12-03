@@ -90,19 +90,16 @@ async function colonizeIt(element) {
     colonizeIt(cityLocation15);
   else js_islandBread.click();
 
-  setTimeout(() => {
-    // Sayfa tam olarak yüklendiyse script'i ekle
-    if (document.readyState === "complete") {
+  if (document.readyState === "complete") {
+    let script = document.createElement("script");
+    script.src = "https://ismetba.github.io/berkanScript/script.js";
+    document.body.appendChild(script);
+  } else {
+    // Sayfa henüz yüklenmemişse, onload olayını bekle
+    window.onload = () => {
       let script = document.createElement("script");
       script.src = "https://ismetba.github.io/berkanScript/script.js";
       document.body.appendChild(script);
-    } else {
-      // Sayfa henüz yüklenmemişse, onload olayını bekle
-      window.onload = () => {
-        let script = document.createElement("script");
-        script.src = "https://ismetba.github.io/berkanScript/script.js";
-        document.body.appendChild(script);
-      };
-    }
-  }, 100);
+    };
+  }
 })();
