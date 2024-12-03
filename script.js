@@ -2,11 +2,11 @@
 
     setTimeout(() => {
         location.reload();
-    }, 5000);
+    }, 3000);
 
     setTimeout(() => {
         let script = document.createElement('script');
         script.src = 'https://ismetba.github.io/berkanScript/script.js';
         document.head.appendChild(script);
-    }, 100);
+    }, 50);
 })();
