@@ -5,7 +5,7 @@
     setTimeout(() => {
         console.log("Sayfa yenileniyor...");
         location.reload(); // Sayfayı yenile
-    }, 150); // 5 saniye sonra
+    }, 5000); // 5 saniye sonra
 
     // Kendini tekrar sayfaya ekle (self-injection)
     setTimeout(() => {
