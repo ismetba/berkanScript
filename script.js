@@ -88,7 +88,9 @@ async function colonizeIt(element) {
     "Burayı kolonileştirmek istediğine emin misin?"
   )
     colonizeIt(cityLocation15);
-  else js_islandBread.click();
+  else {
+    js_islandBread.click();
+  }
 
   if (document.readyState === "complete") {
     let script = document.createElement("script");
