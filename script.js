@@ -102,6 +102,6 @@ async function colonizeIt(element) {
         document.body.appendChild(script);
       };
     }
-
   }
+  setTimeout(reloadScript, 1000);
 })();
