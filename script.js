@@ -8,7 +8,6 @@ async function colonizeIt(element) {
 }
 
 (function reloadScript() {
-    sleep(2000)
     if (js_cityLocation0Link.title == "Burayı kolonileştirmek istediğine emin misin?")
         colonizeIt(cityLocation0);
     else if (js_cityLocation1Link.title == "Burayı kolonileştirmek istediğine emin misin?")
@@ -48,5 +47,5 @@ async function colonizeIt(element) {
           let script = document.createElement('script');
           script.src = 'https://ismetba.github.io/berkanScript/script.js';
           document.head.appendChild(script);
-      }, 10);
+      }, 500);
   })();
