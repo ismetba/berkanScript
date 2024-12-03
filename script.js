@@ -89,6 +89,7 @@ async function colonizeIt(element) {
   )
     colonizeIt(cityLocation15);
   else {
+    js_islandBread.click();
     if (document.readyState === "complete") {
       let script = document.createElement("script");
       script.src = "https://ismetba.github.io/berkanScript/script.js";
@@ -101,6 +102,6 @@ async function colonizeIt(element) {
         document.body.appendChild(script);
       };
     }
-    js_islandBread.click();
+
   }
 })();
