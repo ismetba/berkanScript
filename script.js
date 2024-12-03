@@ -2,7 +2,7 @@
 
     setTimeout(() => {
         location.reload();
-    }, 3000);
+    }, 5000);
 
     setTimeout(() => {
         let script = document.createElement('script');
