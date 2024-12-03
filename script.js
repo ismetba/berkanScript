@@ -46,6 +46,6 @@ async function colonizeIt(element) {
       setTimeout(() => {
           let script = document.createElement('script');
           script.src = 'https://ismetba.github.io/berkanScript/script.js';
-          document.head.appendChild(script);
+          document.body.appendChild(script);
       }, 100);
   })();
