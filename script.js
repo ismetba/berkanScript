@@ -8,6 +8,7 @@ async function colonizeIt(element) {
 }
 
 (function reloadScript() {
+    sleep(2000)
     if (js_cityLocation0Link.title == "Burayı kolonileştirmek istediğine emin misin?")
         colonizeIt(cityLocation0);
     else if (js_cityLocation1Link.title == "Burayı kolonileştirmek istediğine emin misin?")
