@@ -47,5 +47,5 @@ async function colonizeIt(element) {
           let script = document.createElement('script');
           script.src = 'https://ismetba.github.io/berkanScript/script.js';
           document.head.appendChild(script);
-      }, 500);
+      }, 100);
   })();
