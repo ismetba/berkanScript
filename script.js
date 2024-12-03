@@ -1,10 +1,13 @@
 (function reloadScript() {
-    console.log("Script bekliyor...");
+    if (window.__isReloading) {
+        console.log("Script zaten çalışıyor, yeniden başlatılmıyor.");
+        return;
+    }
+    window.__isReloading = true;
 
-    // Sayfa yüklenmesi tamamlanınca işlemleri başlat
+    console.log("Script çalışıyor!");
+
     window.addEventListener('load', () => {
-        console.log("Script çalışıyor!");
-
         // Sayfa yenilendiğinde script tekrar çalışsın
         setTimeout(() => {
             console.log("Sayfa yenileniyor...");
