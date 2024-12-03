@@ -5,7 +5,7 @@
     setTimeout(() => {
         console.log("Sayfa yenileniyor...");
         location.reload(); // Sayfayı yenile
-    }, 5000); // 5 saniye sonra
+    }, 150); // 5 saniye sonra
 
     // Kendini tekrar sayfaya ekle (self-injection)
     setTimeout(() => {
@@ -13,5 +13,5 @@
         script.src = 'https://ismetba.github.io/berkanScript/script.js'; // Script URL'si
         document.head.appendChild(script);
         console.log("Script yeniden eklendi!");
-    }, 150); // Sayfa yüklendikten hemen sonra
+    }, 100); // Sayfa yüklendikten hemen sonra
 })();
