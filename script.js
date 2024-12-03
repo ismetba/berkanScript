@@ -1,7 +1,8 @@
 (function reloadScript() {
-    console.log("Script yükleme durumu kontrol ediliyor...");
+    console.log("Script bekliyor...");
 
-    const startScript = () => {
+    // Sayfa yüklenmesi tamamlanınca işlemleri başlat
+    window.addEventListener('load', () => {
         console.log("Script çalışıyor!");
 
         // Sayfa yenilendiğinde script tekrar çalışsın
@@ -18,11 +19,5 @@
             script.onload = () => console.log("Script başarıyla yüklendi!");
             document.head.appendChild(script);
         }, 100); // 100ms sonra script ekle
-    };
-
-    if (document.readyState === "complete") {
-        startScript(); // Sayfa zaten yüklendiyse hemen başlat
-    } else {
-        window.addEventListener('load', startScript); // Sayfa yüklenmesini bekle
-    }
+    });
 })();
