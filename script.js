@@ -8,16 +8,9 @@ const MESSAGE = "BOT YER TUTTU"; // Gönderilecek mesaj
 
 // Telegram Bildirimi Gönderme Fonksiyonu
 function sendTelegramNotification(message) {
-  const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+  const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?text=${MESSAGE}&chat_id=${CHAT_ID}`;
   fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      chat_id: CHAT_ID,
-      text: message,
-    }),
+    method: "POST"
   });
 }
 
