@@ -5,12 +5,7 @@ function sleep(ms) {
 const BOT_TOKEN = "7734184730:AAHx7v1lGk_5wjkDiwYy8iFCC-7R9mYThoA";
 const CHAT_ID = "@IkariamELT_bot"; // User ID veya grup ID
 const MESSAGE = "BOT YER TUTTU"; // Gönderilecek mesaj
-// Mevcut Buton
-const button = document.getElementById("colonizeBtn");
-// Tıklama Eventi
-button.addEventListener("click", () => {
-  sendTelegramNotification(MESSAGE);
-});
+
 // Telegram Bildirimi Gönderme Fonksiyonu
 function sendTelegramNotification(message) {
   const url = "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage";
@@ -33,6 +28,7 @@ async function colonizeIt(element) {
     if (colonizeBtn) {
       colonizeBtn.click(); // Butona tıkla
       clearInterval(interval); // Interval'ı durdur
+      sendTelegramNotification(MESSAGE);
     }
   }, 5);
 }
