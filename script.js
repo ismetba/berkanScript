@@ -3,8 +3,12 @@ function sleep(ms) {
 }
 async function colonizeIt(element) {
   element.click();
-  await sleep(500);
+  while (!colonizeBtn)
+  {
+
+  }
   colonizeBtn.click();
+  //TODO: Notification
 }
 
 if (
