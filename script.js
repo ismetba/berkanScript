@@ -5,10 +5,12 @@ async function colonizeIt(element) {
   element.click();
   while (!colonizeBtn)
   {
-
+    console.log("deneme");
+    setTimeout(() => {
+      
+    }, 2);
   }
   colonizeBtn.click();
-  //TODO: Notification
 }
 
 if (
