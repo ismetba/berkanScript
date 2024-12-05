@@ -3,7 +3,7 @@ function sleep(ms) {
 }
 
 const BOT_TOKEN = "7734184730:AAHx7v1lGk_5wjkDiwYy8iFCC-7R9mYThoA";
-const CHAT_ID = "@IkariamELT_bot"; // User ID veya grup ID
+const CHAT_ID = "5730338119"; // User ID veya grup ID
 const MESSAGE = "BOT YER TUTTU"; // Gönderilecek mesaj
 
 // Telegram Bildirimi Gönderme Fonksiyonu
