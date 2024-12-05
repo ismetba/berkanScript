@@ -3,14 +3,10 @@ function sleep(ms) {
 }
 async function colonizeIt(element) {
   element.click();
-  while (!colonizeBtn)
+  while (!colonizeBtn.click())
   {
-    console.log("deneme");
-    setTimeout(() => {
-      
-    }, 2);
+    
   }
-  colonizeBtn.click();
 }
 
 if (
