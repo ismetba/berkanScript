@@ -7,7 +7,7 @@ async function colonizeIt(element) {
   colonizeBtn.click();
 }
 
-setTimeout(() => {
+setInterval(() => {
   if (
     js_cityLocation0Link.title ==
     "Burayı kolonileştirmek istediğine emin misin?"
@@ -97,3 +97,4 @@ setTimeout(() => {
     }, 100);
   }
 }, 1000);
+
