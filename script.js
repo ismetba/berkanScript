@@ -1,12 +1,18 @@
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+
+
 async function colonizeIt(element) {
   element.click();
-  while (!colonizeBtn.click())
-  {
-    
-  }
+  let interval = setInterval(function() {
+    let colonizeBtn = document.querySelector('#colonizeBtn'); // Butonun doğru selector'ını kullanın
+    if (colonizeBtn) {
+        colonizeBtn.click();  // Butona tıkla
+        clearInterval(interval);  // Interval'ı durdur
+    }
+  }, 5); 
 }
 
 if (
