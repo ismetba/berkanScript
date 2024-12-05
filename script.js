@@ -2,17 +2,39 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-
+const BOT_TOKEN = "7734184730:AAHx7v1lGk_5wjkDiwYy8iFCC-7R9mYThoA";
+const CHAT_ID = "@IkariamELT_bot"; // User ID veya grup ID
+const MESSAGE = "BOT YER TUTTU"; // Gönderilecek mesaj
+// Mevcut Buton
+const button = document.getElementById("colonizeBtn");
+// Tıklama Eventi
+button.addEventListener("click", () => {
+  sendTelegramNotification(MESSAGE);
+});
+// Telegram Bildirimi Gönderme Fonksiyonu
+function sendTelegramNotification(message) {
+  const url = "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage";
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      text: message,
+    }),
+  });
+}
 
 async function colonizeIt(element) {
   element.click();
-  let interval = setInterval(function() {
-    let colonizeBtn = document.querySelector('#colonizeBtn'); // Butonun doğru selector'ını kullanın
+  let interval = setInterval(function () {
+    let colonizeBtn = document.querySelector("#colonizeBtn"); // Butonun doğru selector'ını kullanın
     if (colonizeBtn) {
-        colonizeBtn.click();  // Butona tıkla
-        clearInterval(interval);  // Interval'ı durdur
+      colonizeBtn.click(); // Butona tıkla
+      clearInterval(interval); // Interval'ı durdur
     }
-  }, 5); 
+  }, 5);
 }
 
 if (
