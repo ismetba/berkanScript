@@ -1,7 +1,3 @@
-setTimeout(() => {
-  
-}, 1000);
-
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -11,7 +7,7 @@ async function colonizeIt(element) {
   colonizeBtn.click();
 }
 
-(function reloadScript() {
+setTimeout(() => {
   if (
     js_cityLocation0Link.title ==
     "Burayı kolonileştirmek istediğine emin misin?"
@@ -107,5 +103,4 @@ async function colonizeIt(element) {
       };
     }
   }
-  setTimeout(reloadScript, 1000);
-})();
+}, 1000);
